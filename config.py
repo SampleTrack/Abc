@@ -17,6 +17,11 @@ class Config:
     OWNER_ID = int(os.getenv("OWNER_ID", 0))
     LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", 0))
     
+    # Web Server Settings (for Render, Heroku, etc.)
+    PORT = int(os.getenv("PORT", 8080))
+    HOST = os.getenv("HOST", "0.0.0.0")
+    WEBHOOK_URL = os.getenv("WEBHOOK_URL", "")  # Optional: for webhook mode
+    
     # Protection Settings (Default)
     DEFAULT_SETTINGS = {
         # Basic protection
